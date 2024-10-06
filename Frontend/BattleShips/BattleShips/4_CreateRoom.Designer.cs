@@ -44,9 +44,9 @@
             button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Algerian", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(307, 111);
+            button1.Location = new Point(273, 106);
             button1.Name = "button1";
-            button1.Size = new Size(284, 56);
+            button1.Size = new Size(252, 53);
             button1.TabIndex = 0;
             button1.Text = "Create a room";
             button1.UseVisualStyleBackColor = false;
@@ -60,9 +60,9 @@
             button2.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Algerian", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(566, 201);
+            button2.Location = new Point(503, 191);
             button2.Name = "button2";
-            button2.Size = new Size(145, 39);
+            button2.Size = new Size(129, 37);
             button2.TabIndex = 1;
             button2.Text = "Confirm";
             button2.UseVisualStyleBackColor = false;
@@ -74,18 +74,19 @@
             label1.BackColor = Color.Transparent;
             label1.FlatStyle = FlatStyle.Flat;
             label1.Font = new Font("Algerian", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(218, 208);
+            label1.Location = new Point(194, 198);
             label1.Name = "label1";
-            label1.Size = new Size(102, 24);
+            label1.Size = new Size(98, 22);
             label1.TabIndex = 2;
             label1.Text = "ROom ID:";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(335, 207);
+            textBox1.Font = new Font("Algerian", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(298, 197);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(223, 21);
+            textBox1.Size = new Size(199, 31);
             textBox1.TabIndex = 3;
             // 
             // btnBack
@@ -98,7 +99,7 @@
             btnBack.Font = new Font("Algerian", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBack.Location = new Point(-2, -1);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(106, 35);
+            btnBack.Size = new Size(94, 33);
             btnBack.TabIndex = 4;
             btnBack.Text = "BACK";
             btnBack.UseVisualStyleBackColor = false;
@@ -106,11 +107,11 @@
             // 
             // CreateRoom
             // 
-            AutoScaleDimensions = new SizeF(9F, 21F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(900, 472);
+            ClientSize = new Size(800, 450);
             Controls.Add(btnBack);
             Controls.Add(textBox1);
             Controls.Add(label1);

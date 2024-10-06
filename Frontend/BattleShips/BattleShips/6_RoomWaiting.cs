@@ -31,7 +31,7 @@ namespace BattleShips
 
         private void btnReady_Click(object sender, EventArgs e)
         {
-            ShipDeployment shipDeployment = new ShipDeployment();   
+            ShipDeployment shipDeployment = new ShipDeployment();
             shipDeployment.Show();
 
             this.Hide();

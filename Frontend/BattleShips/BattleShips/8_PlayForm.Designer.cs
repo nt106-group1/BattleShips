@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlayForm));
             pBoxMe = new PictureBox();
             pBoxDeskMe = new PictureBox();
@@ -38,6 +39,10 @@
             btnExit = new Button();
             lbMyName = new Label();
             lbEnemyName = new Label();
+            meProgress = new ProgressBar();
+            enemyprogress = new ProgressBar();
+            afkTimer = new System.Windows.Forms.Timer(components);
+            avtTimer = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pBoxMe).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pBoxDeskMe).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pBoxDeskEnemy).BeginInit();
@@ -46,6 +51,8 @@
             // 
             // pBoxMe
             // 
+            pBoxMe.BackgroundImage = Properties.Resources.boat;
+            pBoxMe.BackgroundImageLayout = ImageLayout.Stretch;
             pBoxMe.Location = new Point(178, 60);
             pBoxMe.Name = "pBoxMe";
             pBoxMe.Size = new Size(98, 72);
@@ -54,13 +61,14 @@
             // 
             // pBoxDeskMe
             // 
-            pBoxDeskMe.BackgroundImage = (Image)resources.GetObject("pBoxDeskMe.BackgroundImage");
+            pBoxDeskMe.BackgroundImage = Properties.Resources.bg;
             pBoxDeskMe.BackgroundImageLayout = ImageLayout.Stretch;
             pBoxDeskMe.Location = new Point(178, 138);
             pBoxDeskMe.Name = "pBoxDeskMe";
             pBoxDeskMe.Size = new Size(300, 300);
             pBoxDeskMe.TabIndex = 1;
             pBoxDeskMe.TabStop = false;
+            pBoxDeskMe.Paint += pBoxDeskMe_Paint;
             // 
             // pBoxDeskEnemy
             // 
@@ -71,9 +79,14 @@
             pBoxDeskEnemy.Size = new Size(300, 300);
             pBoxDeskEnemy.TabIndex = 2;
             pBoxDeskEnemy.TabStop = false;
+            pBoxDeskEnemy.Click += pBoxDeskEnemy_Click;
+            pBoxDeskEnemy.Paint += pBoxDeskEnemy_Paint;
+            pBoxDeskEnemy.MouseMove += pBoxDeskEnemy_MouseMove;
             // 
             // pBoxEnemy
             // 
+            pBoxEnemy.BackgroundImage = Properties.Resources.user;
+            pBoxEnemy.BackgroundImageLayout = ImageLayout.Stretch;
             pBoxEnemy.Location = new Point(699, 60);
             pBoxEnemy.Name = "pBoxEnemy";
             pBoxEnemy.Size = new Size(98, 72);
@@ -142,6 +155,28 @@
             lbEnemyName.TabIndex = 8;
             lbEnemyName.Text = "Name";
             // 
+            // meProgress
+            // 
+            meProgress.Location = new Point(178, 130);
+            meProgress.Name = "meProgress";
+            meProgress.Size = new Size(300, 10);
+            meProgress.TabIndex = 9;
+            // 
+            // enemyprogress
+            // 
+            enemyprogress.Location = new Point(497, 129);
+            enemyprogress.Name = "enemyprogress";
+            enemyprogress.Size = new Size(300, 11);
+            enemyprogress.TabIndex = 10;
+            // 
+            // afkTimer
+            // 
+            afkTimer.Tick += afkTimer_Tick;
+            // 
+            // avtTimer
+            // 
+            avtTimer.Tick += avtTimer_Tick;
+            // 
             // PlayForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -149,6 +184,8 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
+            Controls.Add(enemyprogress);
+            Controls.Add(meProgress);
             Controls.Add(lbEnemyName);
             Controls.Add(lbMyName);
             Controls.Add(btnExit);
@@ -159,6 +196,7 @@
             Controls.Add(pBoxDeskMe);
             Controls.Add(pBoxMe);
             Name = "PlayForm";
+            Load += PlayForm_Load;
             ((System.ComponentModel.ISupportInitialize)pBoxMe).EndInit();
             ((System.ComponentModel.ISupportInitialize)pBoxDeskMe).EndInit();
             ((System.ComponentModel.ISupportInitialize)pBoxDeskEnemy).EndInit();
@@ -178,5 +216,10 @@
         private Button btnExit;
         private Label lbMyName;
         private Label lbEnemyName;
+        private ProgressBar meProgress;
+        private ProgressBar enemyprogress;
+        private System.Windows.Forms.Timer afkTimer;
+        private System.Windows.Forms.Timer avtTimer;
+        private System.Windows.Forms.PictureBox winlostPBox;
     }
 }
