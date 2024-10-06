@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "96zewkMYl+RSnFNJoP+vIZYJdFx0y4EMolmQMB0Ht+4vG68l6s+Fvn9nKNlW3MN/vYbirCbSZ//YvsflY4V6eg==",
+  "dgSpecHash": "0uKSc1xNHyI=",
   "success": true,
-  "projectFilePath": "D:\\NT106-final\\InterfaceBattleShips\\BattleShips\\BattleShips\\BattleShips.csproj",
+  "projectFilePath": "D:\\BattleShips_KhoaHM\\Frontend\\BattleShips\\BattleShips\\BattleShips.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
